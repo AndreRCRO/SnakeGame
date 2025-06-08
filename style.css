@@ -48,3 +48,191 @@ body {
 .play-board .head{
     background: purple;
 }
+
+/* Menu Styles */
+.menu-container {
+    width: 65vmin;
+    height: 70vmin;
+    border-radius: 5px;
+    background-color: #293447;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.game-title {
+    color: #B8C6DC;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.wall-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #B8C6DC;
+    font-size: 1.2rem;
+}
+
+.speed-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #B8C6DC;
+    font-size: 1.2rem;
+}
+
+.speed-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.speed-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.speed-btn:hover {
+    background: #45a049;
+}
+
+.speed-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.speed-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Game Over Screen Styles */
+.game-over-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-over-content {
+    background: #293447;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #B8C6DC;
+}
+
+.game-over-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #B8C6DC;
+}
+
+.game-over-content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.game-over-content button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.game-over-content button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
